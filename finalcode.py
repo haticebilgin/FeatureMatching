@@ -35,8 +35,6 @@ def feature_matching(img1, img2):
         pts = np.float32([[0, 0], [0, height], [height, width], [width, 0]]).reshape(-1, 1, 2)
         dst = cv2.perspectiveTransform(pts, matrix)
         # print("points: ", dst)
-        # background = cv2.imread('C:\\Users\\Lenovo\\Desktop\\matchingPics\\wf.JPG')
-        # overlay = cv2.imread('C:\\Users\\Lenovo\\Desktop\\matchingPics\\mf04.JPG', -1)
         # A = dst.flatten()
 
     else:
