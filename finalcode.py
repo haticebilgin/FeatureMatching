@@ -48,17 +48,7 @@ if __name__ == "__main__":
     images_wf = []
     images = [cv2.imread(file, 0) for file in glob.glob("C:\\Users\\Lenovo\\Desktop\\matchingPics\\mf*.jpg")]
     images[0] = images[0][1945:2945, 95:1695]
-    images[1] = images[1][1990:2990, 510:2110]
-    images[2] = images[2][1855:2855, 1015:2615]
-    images[3] = images[3][1700:2700, 1500:3100]
-    images[4] = images[4][1885:2885, 1860:3460]
-    images[5] = images[5][1850:2850, 2355:3955]
-    images[6] = images[6][1850:2850, 2950:4550]
-    images[7] = images[7][1820:2820, 3425:5025]
-    images[8] = images[8][1830:2830, 3920:5520]
-    images[9] = images[9][1775:2775, 4160:5760]
-    images[10] = images[10][1765:2265, 4650:5450]
-    images[11] = images[11][1775:2275, 5150:5950]
+    #info restricted 
 
     images_wf = [cv2.imread(file, 0) for file in
                  glob.glob("C:\\Users\\Lenovo\\Desktop\\matchingPics\\wfimages\\wf*.png")]
