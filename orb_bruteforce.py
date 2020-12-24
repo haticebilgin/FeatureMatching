@@ -2,10 +2,10 @@ import numpy as np
 import cv2
 # ORB + BRUTE FORCE Matcher + Homography
 # -------------------------------------------------------------------------------------------
-img1 = cv2.imread('C:\\Users\\Lenovo\\Desktop\\matchingPics\\mf05.JPG', 0)
+img1 = cv2.imread('C:\\Users\\Lenovo\\Desktop\\mf05.JPG', 0)
 img1 = img1[1850:2850, 2355:3955]
 # -------------------------------------------------------------------------------------------
-img2 = cv2.imread('C:\\Users\\Lenovo\\Desktop\\matchingPics\\wf.JPG', 0)
+img2 = cv2.imread('C:\\Users\\Lenovo\\Desktop\\wf.JPG', 0)
 kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
 img2 = cv2.filter2D(img2, -1, kernel)
 
@@ -44,10 +44,10 @@ print("Points 2: ", points2)
 
 h, mask = cv2.findHomography(points1, points2, cv2.RANSAC)
 print("h: ", h)
-im1 = cv2.imread('C:\\Users\\Lenovo\\Desktop\\matchingPics\\mf05.JPG')
+im1 = cv2.imread('C:\\Users\\Lenovo\\Desktop\\mf05.JPG')
 im1 = im1[1850:2850, 2355:3955]
 
-im2 = cv2.imread('C:\\Users\\Lenovo\\Desktop\\matchingPics\\wf.JPG')
+im2 = cv2.imread('C:\\Users\\Lenovo\\Desktop\\wf.JPG')
 im2 = cv2.resize(im2, (0, 0), fx=size_ratio, fy=size_ratio, interpolation=cv2.INTER_NEAREST)
 height, width, channels = im2.shape
 
